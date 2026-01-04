@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 export async function seed(knex) {
   const hashedPassword = await bcrypt.hash('password123', 10);
 
+  await knex('menu_items').del();
   await knex('vendors').del();
 
   await knex('vendors').insert([
