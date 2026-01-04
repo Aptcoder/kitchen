@@ -17,4 +17,9 @@ export default class CustomerRepository {
     const customer = await this.db('customers').where('id', id).first();
     return customer;
   }
+
+  async updateCustomer(customerId, customer) {
+    const [updatedCustomer] = await this.db('customers').where('id', customerId).update(customer).returning('*');
+    return updatedCustomer;
+  }
 }

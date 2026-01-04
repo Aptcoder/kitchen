@@ -5,6 +5,9 @@ import CustomerRepository from '../repositories/customer.js';
 import VendorController from '../controllers/vendor.js';
 import VendorService from '../services/vendor.js';
 import VendorRepository from '../repositories/vendor.js';
+import MenuItemController from '../controllers/menu_item.js';
+import MenuItemService from '../services/menu_item.js';
+import MenuItemRepository from '../repositories/menu_item.js';
 
 export default async (db) => {
     const container = createContainer({
@@ -18,6 +21,9 @@ export default async (db) => {
         vendorController: asClass(VendorController),
         vendorService: asClass(VendorService),
         vendorRepository: asClass(VendorRepository),
+        menuItemController: asClass(MenuItemController),
+        menuItemService: asClass(MenuItemService),
+        menuItemRepository: asClass(MenuItemRepository),
         db: asValue(db),
     });
 

@@ -13,7 +13,7 @@ class VendorController {
   }
 
   async updateVendor(req, res) {
-    const vendor = await this.vendorService.updateVendor(req.params.id, req.body);
+    const vendor = await this.vendorService.updateVendor(req.vendor.id, req.body);
     return res.json({
       status: true,
       data: vendor,
@@ -43,7 +43,8 @@ class VendorController {
   }
 
   async getVendor(req, res) {
-    const vendor = await this.vendorService.getVendor(req.params.id);
+    const vendorId = req.vendor ? req.vendor.id : req.params.id;
+    const vendor = await this.vendorService.getVendor(vendorId);
     return res.json({
       status: true,
       data: vendor,

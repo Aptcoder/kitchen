@@ -1,8 +1,6 @@
-import dotenv from 'dotenv';
+import 'dotenv/config';
 import express from 'express';
 import loaders from './loaders/index.js';
-
-dotenv.config();
 
 const startServer = async () => {
     const app = express();

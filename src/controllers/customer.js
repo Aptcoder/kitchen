@@ -13,7 +13,7 @@ class CustomerController {
   }
 
   async updateCustomer(req, res) {
-    const customer = await this.customerService.updateCustomer(req.params.id, req.body);
+    const customer = await this.customerService.updateCustomer(req.customer.id, req.body);
     return res.json({
       status: true,
       data: customer,
@@ -43,7 +43,7 @@ class CustomerController {
   }
 
   async getCustomer(req, res) {
-    const customer = await this.customerService.getCustomer(req.params.id);
+    const customer = await this.customerService.getCustomer(req.customer.id);
     return res.json({
       status: true,
       data: customer,

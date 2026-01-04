@@ -8,8 +8,8 @@ export const createCustomerSchema = Joi.object({
 }).required();
 
 export const updateCustomerSchema = Joi.object({
-    first_name: Joi.string().required(),
-    last_name: Joi.string().required(),
+    first_name: Joi.string().optional(),
+    last_name: Joi.string().optional(),
 }).required();
 
 export const authenticateCustomerSchema = Joi.object({

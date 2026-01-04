@@ -17,5 +17,14 @@ export default class VendorRepository {
     const vendor = await this.db('vendors').where('id', id).first();
     return vendor;
   }
+
+  async findAllVendors() {
+    return this.db('vendors');
+  }
+
+  async updateVendor(vendorId, vendor) {
+    const [updatedVendor] = await this.db('vendors').where('id', vendorId).update(vendor).returning('*');
+    return updatedVendor;
+  }
 }
 
