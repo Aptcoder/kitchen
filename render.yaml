@@ -4,7 +4,7 @@ services:
     name: kitchen-api
     env: node
     plan: free
-    buildCommand: npm install && npx knex migrate:latest
+    buildCommand: npm install && npx knex migrate:latest && npx knex seed:run
     startCommand: node src/app.js
     envVars:
       - key: NODE_ENV
