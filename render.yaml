@@ -3,6 +3,7 @@ services:
   - type: web
     name: kitchen-api
     env: node
+    plan: free
     buildCommand: npm install && npx knex migrate:latest
     startCommand: node src/app.js
     envVars:
