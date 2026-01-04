@@ -1,0 +1,34 @@
+{
+  "name": "kitchen",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aptcoder/kitchen.git"
+  },
+  "author": "Samuel Omilo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aptcoder/kitchen/issues"
+  },
+  "homepage": "https://github.com/aptcoder/kitchen#readme",
+  "description": "",
+  "dependencies": {
+    "awilix": "^12.0.5",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
