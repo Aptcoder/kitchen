@@ -13,11 +13,6 @@ export default (err, req, res, next) => {
         message = err.details[0].message.replace(/"/g, '');
     }
 
-    else if (err.code && err.code.startsWith('2')) {
-        status = 400;
-        message = 'Database error';
-    }
-
     else if (err.message) {
         message = err.message;
     }

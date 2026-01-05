@@ -17,6 +17,11 @@ class CustomerService {
     return newCustomer;
   }
 
+  async getCustomers() {
+    const customers = await this.customerRepository.findAllCustomers();
+    return customers;
+  }
+
   async getCustomer(customerId) {
     const customer = await this.customerRepository.findCustomerById(customerId);
     if (!customer) {

@@ -13,6 +13,11 @@ export default class CustomerRepository {
     return customer;
   }
 
+  async findAllCustomers() {
+    const customers = await this.db('customers').select('*');
+    return customers;
+  }
+
   async findCustomerById(id) {
     const customer = await this.db('customers').where('id', id).first();
     return customer;
